@@ -26,6 +26,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
     return MyScaffold(
       body: Column(
         children: [
@@ -36,6 +37,42 @@ class _HomePageState extends State<HomePage> {
                 if (_polls != null) _buildList(),
                 if (_isLoading) _buildProgress(),
               ],
+            ),
+          ),
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text(
+                '1. บุคคลใดที่คุณจะสนับสนุนให้เป็นนายกรัฐมนตรีในการเลือกตั้งครั้งนี้',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14.5,
+                ),
+              ),
+            ),
+          ),
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text(
+                '2. ในการเลือกตั้ง ส.ส. แบบแบ่งเขต คุณจะเลือกผู้สมัครจากพรรคการเมืองใด',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14.5,
+                ),
+              ),
+            ),
+          ),
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text(
+                '3. ในการเลือกตั้ง ส.ส. แบบบัญชีรายชื่อ คุณจะเลือกผู้สมัครจากพรรคการเมืองใด',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14.5,
+                ),
+              ),
             ),
           ),
         ],
@@ -63,11 +100,13 @@ class _HomePageState extends State<HomePage> {
             CircularProgressIndicator(color: Colors.white),
             Padding(
               padding: EdgeInsets.all(16.0),
-              child: Text('รอสักครู่', style: TextStyle(color: Colors.white)),
+              child: Text('รอสักครู่', style: TextStyle(color: Colors.white)
+              ),
             ),
           ],
         ),
       ),
     );
   }
+
 }
